@@ -1,0 +1,49 @@
+{
+  "evaluation_standard": "Stratified 5-Fold Cross Validation & Holdout Audit",
+  "classifier_evaluation": {
+    "rf_cv_mean": 0.9916,
+    "svm_cv_mean": 0.984,
+    "dnn_cv_mean": 0.9832,
+    "test_accuracy": 0.988,
+    "test_f1": 0.9878,
+    "misclassified_samples": 6,
+    "total_test_samples": 500
+  },
+  "yield_regression_evaluation": {
+    "r2_score": 0.9585,
+    "mae_tonnes_per_ha": 1.08
+  },
+  "dataset_separation": {
+    "dataset_a_crop_recommendation": {
+      "records": 2500,
+      "crops": 25,
+      "features": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph",
+        "rainfall"
+      ],
+      "target": "crop_label",
+      "purpose": "Supervised Crop Classification (RF, SVM, DNN)"
+    },
+    "dataset_b_apy_production": {
+      "records": 52965,
+      "time_span": "1997 - 2020 (Completed census years)",
+      "karnataka_seasonal_updates": "2021 - 2025 (KSDA Raitamitra periodic reports)",
+      "features": [
+        "State_Name",
+        "District_Name",
+        "Crop_Year",
+        "Season",
+        "Crop",
+        "Area",
+        "Production",
+        "Yield_Per_Ha"
+      ],
+      "purpose": "District Agro-Climatic Baseline & Yield Distribution Benchmarking"
+    }
+  }
+}

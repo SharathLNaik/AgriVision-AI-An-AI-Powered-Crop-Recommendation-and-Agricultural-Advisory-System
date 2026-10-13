@@ -1,0 +1,60 @@
+{
+  "crop_classification": {
+    "random_forest": {
+      "holdout_accuracy": 0.9880,
+      "cross_val_mean_accuracy": 0.9916,
+      "precision": 0.9880,
+      "recall": 0.9880,
+      "f1_score": 0.9878,
+      "test_samples": 500,
+      "misclassified": 6
+    },
+    "svm": {
+      "holdout_accuracy": 0.9840,
+      "cross_val_mean_accuracy": 0.9840,
+      "f1_score": 0.9839
+    },
+    "deep_neural_network": {
+      "holdout_accuracy": 0.9840,
+      "cross_val_mean_accuracy": 0.9832,
+      "f1_score": 0.9838
+    }
+  },
+  "yield_regression": {
+    "model": "Random Forest Regressor (Area, District, State, Season)",
+    "r2_score": 0.9585,
+    "mae_tonnes_per_ha": 1.08,
+    "records_evaluated": 62372
+  },
+  "feature_importances": {
+    "rainfall": 0.2213,
+    "humidity": 0.2115,
+    "K": 0.1757,
+    "P": 0.1468,
+    "N": 0.1150,
+    "temperature": 0.0752,
+    "ph": 0.0545
+  },
+  "datasets_breakdown": {
+    "dataset_a_crop_recommendation": {
+      "samples": 2500,
+      "features": ["N", "P", "K", "temperature", "humidity", "ph", "rainfall"],
+      "crops_count": 25,
+      "balance": "100 samples per crop (perfectly balanced)",
+      "duplicate_leakage": 0,
+      "purpose": "Supervised Crop Recommendation Classification (RF, SVM, DNN)"
+    },
+    "dataset_b_south_india_apy": {
+      "records": 64275,
+      "coverage": "1997 - 2025 (Annual district agricultural statistics)",
+      "states": ["Karnataka", "Tamil Nadu", "Andhra Pradesh", "Telangana", "Kerala"],
+      "karnataka_records": "36,000+ historical & ongoing APY records",
+      "sources": [
+        "Directorate of Economics and Statistics (DES), Ministry of Agriculture & Farmers Welfare",
+        "Karnataka State Department of Agriculture (KSDA / Raitamitra Portal)",
+        "Dataful India Agriculture Datasets"
+      ],
+      "purpose": "District Agro-Climatic Baselines, APY Yield Distribution Benchmarks & Yield Regression"
+    }
+  }
+}

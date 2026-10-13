@@ -1,0 +1,765 @@
+{
+  "arcanut (processed)": {
+    "mean_yield": 1.48,
+    "min_yield": 1.12,
+    "max_yield": 1.92,
+    "sample_count": 20,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "arecanut": {
+    "mean_yield": 3.27,
+    "min_yield": 0.3,
+    "max_yield": 8.03,
+    "sample_count": 1669,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "arhar/tur": {
+    "mean_yield": 0.76,
+    "min_yield": 0.39,
+    "max_yield": 1.22,
+    "sample_count": 1447,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "ash gourd": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 44,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "atcanut (raw)": {
+    "mean_yield": 7.15,
+    "min_yield": 5.57,
+    "max_yield": 9.13,
+    "sample_count": 20,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "bajra": {
+    "mean_yield": 1.41,
+    "min_yield": 0.67,
+    "max_yield": 2.34,
+    "sample_count": 1256,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "banana": {
+    "mean_yield": 33.39,
+    "min_yield": 7.11,
+    "max_yield": 66.24,
+    "sample_count": 1251,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "beans & mutter(vegetable)": {
+    "mean_yield": 5.08,
+    "min_yield": 1.48,
+    "max_yield": 9.58,
+    "sample_count": 98,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "beet root": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 16,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "ber": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 11,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "bhindi": {
+    "mean_yield": 5.87,
+    "min_yield": 1.72,
+    "max_yield": 11.06,
+    "sample_count": 127,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "bitter gourd": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 82,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "black gram": {
+    "mean_yield": 1.66,
+    "min_yield": 1.14,
+    "max_yield": 2.32,
+    "sample_count": 870,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "black pepper": {
+    "mean_yield": 0.93,
+    "min_yield": 0.3,
+    "max_yield": 2.44,
+    "sample_count": 585,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "bottle gourd": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 72,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "brinjal": {
+    "mean_yield": 10.83,
+    "min_yield": 3.38,
+    "max_yield": 20.16,
+    "sample_count": 260,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cabbage": {
+    "mean_yield": 22.52,
+    "min_yield": 0.3,
+    "max_yield": 53.71,
+    "sample_count": 113,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cardamom": {
+    "mean_yield": 0.1,
+    "min_yield": 0.3,
+    "max_yield": 0.21,
+    "sample_count": 325,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "carrot": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 8,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cashewnut": {
+    "mean_yield": 5.42,
+    "min_yield": 0.3,
+    "max_yield": 62.12,
+    "sample_count": 971,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cashewnut processed": {
+    "mean_yield": 0.12,
+    "min_yield": 0.3,
+    "max_yield": 0.19,
+    "sample_count": 21,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cashewnut raw": {
+    "mean_yield": 0.58,
+    "min_yield": 0.31,
+    "max_yield": 0.91,
+    "sample_count": 35,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "castor seed": {
+    "mean_yield": 0.68,
+    "min_yield": 0.37,
+    "max_yield": 1.06,
+    "sample_count": 1058,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cauliflower": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 14,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "chickpea": {
+    "mean_yield": 1.65,
+    "min_yield": 1.12,
+    "max_yield": 2.31,
+    "sample_count": 870,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "citrus fruit": {
+    "mean_yield": 8.36,
+    "min_yield": 0.32,
+    "max_yield": 18.42,
+    "sample_count": 149,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "coconut": {
+    "mean_yield": 10233.12,
+    "min_yield": 6012.13,
+    "max_yield": 15509.36,
+    "sample_count": 727,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "coffee": {
+    "mean_yield": 1.67,
+    "min_yield": 1.15,
+    "max_yield": 2.33,
+    "sample_count": 876,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "coriander": {
+    "mean_yield": 0.52,
+    "min_yield": 0.3,
+    "max_yield": 0.87,
+    "sample_count": 889,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cotton": {
+    "mean_yield": 2.31,
+    "min_yield": 1.75,
+    "max_yield": 3.0,
+    "sample_count": 870,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cotton(lint)": {
+    "mean_yield": 2.22,
+    "min_yield": 1.39,
+    "max_yield": 3.25,
+    "sample_count": 1369,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cowpea(lobia)": {
+    "mean_yield": 0.65,
+    "min_yield": 0.3,
+    "max_yield": 1.21,
+    "sample_count": 425,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "cucumber": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 93,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "drum stick": {
+    "mean_yield": 0.58,
+    "min_yield": 0.3,
+    "max_yield": 1.46,
+    "sample_count": 112,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "dry chillies": {
+    "mean_yield": 2.74,
+    "min_yield": 1.14,
+    "max_yield": 4.74,
+    "sample_count": 2082,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "dry ginger": {
+    "mean_yield": 12.97,
+    "min_yield": 1.14,
+    "max_yield": 27.75,
+    "sample_count": 767,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "garlic": {
+    "mean_yield": 6.71,
+    "min_yield": 0.3,
+    "max_yield": 14.93,
+    "sample_count": 352,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "ginger": {
+    "mean_yield": 11.55,
+    "min_yield": 0.95,
+    "max_yield": 24.81,
+    "sample_count": 16,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "gram": {
+    "mean_yield": 1.0,
+    "min_yield": 0.5,
+    "max_yield": 1.62,
+    "sample_count": 1081,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "grapes": {
+    "mean_yield": 26.25,
+    "min_yield": 18.51,
+    "max_yield": 35.92,
+    "sample_count": 83,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "groundnut": {
+    "mean_yield": 1.76,
+    "min_yield": 0.85,
+    "max_yield": 2.9,
+    "sample_count": 3097,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "guar seed": {
+    "mean_yield": 3.61,
+    "min_yield": 0.3,
+    "max_yield": 11.24,
+    "sample_count": 27,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "horse-gram": {
+    "mean_yield": 0.53,
+    "min_yield": 0.33,
+    "max_yield": 0.78,
+    "sample_count": 1825,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "jack fruit": {
+    "mean_yield": 7.95,
+    "min_yield": 1.89,
+    "max_yield": 15.54,
+    "sample_count": 82,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "jowar": {
+    "mean_yield": 1.43,
+    "min_yield": 0.73,
+    "max_yield": 2.31,
+    "sample_count": 2135,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "korra": {
+    "mean_yield": 0.78,
+    "min_yield": 0.46,
+    "max_yield": 1.18,
+    "sample_count": 126,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "lab-lab": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 48,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "lemon": {
+    "mean_yield": 9.12,
+    "min_yield": 5.17,
+    "max_yield": 14.06,
+    "sample_count": 39,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "linseed": {
+    "mean_yield": 0.34,
+    "min_yield": 0.3,
+    "max_yield": 0.55,
+    "sample_count": 306,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "litchi": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 6,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "maize": {
+    "mean_yield": 4.42,
+    "min_yield": 2.27,
+    "max_yield": 7.11,
+    "sample_count": 3394,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "mango": {
+    "mean_yield": 6.12,
+    "min_yield": 2.54,
+    "max_yield": 10.6,
+    "sample_count": 251,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "masoor": {
+    "mean_yield": 0.7,
+    "min_yield": 0.3,
+    "max_yield": 1.25,
+    "sample_count": 37,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "mesta": {
+    "mean_yield": 5.97,
+    "min_yield": 1.79,
+    "max_yield": 11.2,
+    "sample_count": 228,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "moong(green gram)": {
+    "mean_yield": 0.51,
+    "min_yield": 0.3,
+    "max_yield": 0.88,
+    "sample_count": 1861,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "mung bean": {
+    "mean_yield": 1.68,
+    "min_yield": 1.16,
+    "max_yield": 2.32,
+    "sample_count": 870,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "niger seed": {
+    "mean_yield": 0.36,
+    "min_yield": 0.3,
+    "max_yield": 0.54,
+    "sample_count": 467,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "onion": {
+    "mean_yield": 19.74,
+    "min_yield": 0.3,
+    "max_yield": 76.78,
+    "sample_count": 1767,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "orange": {
+    "mean_yield": 9.3,
+    "min_yield": 0.99,
+    "max_yield": 19.69,
+    "sample_count": 80,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "other  rabi pulses": {
+    "mean_yield": 0.68,
+    "min_yield": 0.3,
+    "max_yield": 1.35,
+    "sample_count": 527,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "other cereals & millets": {
+    "mean_yield": 1.0,
+    "min_yield": 0.7,
+    "max_yield": 1.36,
+    "sample_count": 37,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "other citrus fruit": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 54,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "other fresh fruits": {
+    "mean_yield": 1.59,
+    "min_yield": 0.3,
+    "max_yield": 4.13,
+    "sample_count": 181,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "other kharif pulses": {
+    "mean_yield": 0.66,
+    "min_yield": 0.3,
+    "max_yield": 1.21,
+    "sample_count": 705,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "other vegetables": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 129,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "paddy": {
+    "mean_yield": 4.15,
+    "min_yield": 3.03,
+    "max_yield": 5.54,
+    "sample_count": 51,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "papaya": {
+    "mean_yield": 53.19,
+    "min_yield": 0.3,
+    "max_yield": 130.21,
+    "sample_count": 176,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "pear": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 6,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "peas  (vegetable)": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 11,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "peas & beans (pulses)": {
+    "mean_yield": 8.7,
+    "min_yield": 7.13,
+    "max_yield": 10.67,
+    "sample_count": 211,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "pigeonpeas (tur)": {
+    "mean_yield": 1.66,
+    "min_yield": 1.13,
+    "max_yield": 2.31,
+    "sample_count": 870,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "pineapple": {
+    "mean_yield": 14.5,
+    "min_yield": 2.15,
+    "max_yield": 29.94,
+    "sample_count": 57,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "plums": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 6,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "pome fruit": {
+    "mean_yield": 10.15,
+    "min_yield": 0.3,
+    "max_yield": 26.8,
+    "sample_count": 153,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "pome granet": {
+    "mean_yield": 4.56,
+    "min_yield": 0.3,
+    "max_yield": 13.51,
+    "sample_count": 66,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "potato": {
+    "mean_yield": 15.71,
+    "min_yield": 9.57,
+    "max_yield": 23.39,
+    "sample_count": 647,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "pulses total": {
+    "mean_yield": 0.51,
+    "min_yield": 0.37,
+    "max_yield": 0.68,
+    "sample_count": 55,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "pump kin": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 51,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "ragi": {
+    "mean_yield": 1.85,
+    "min_yield": 1.04,
+    "max_yield": 2.85,
+    "sample_count": 1806,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "ragi (finger millet)": {
+    "mean_yield": 2.57,
+    "min_yield": 1.97,
+    "max_yield": 3.32,
+    "sample_count": 870,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "rapeseed &mustard": {
+    "mean_yield": 0.43,
+    "min_yield": 0.3,
+    "max_yield": 1.07,
+    "sample_count": 481,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "redish": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 41,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "ribed guard": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 38,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "rice": {
+    "mean_yield": 3.19,
+    "min_yield": 2.48,
+    "max_yield": 4.08,
+    "sample_count": 4049,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "rubber": {
+    "mean_yield": 1.37,
+    "min_yield": 1.16,
+    "max_yield": 1.64,
+    "sample_count": 28,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "safflower": {
+    "mean_yield": 0.69,
+    "min_yield": 0.41,
+    "max_yield": 1.04,
+    "sample_count": 392,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "samai": {
+    "mean_yield": 0.64,
+    "min_yield": 0.37,
+    "max_yield": 0.97,
+    "sample_count": 87,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "sannhamp": {
+    "mean_yield": 0.3,
+    "min_yield": 0.3,
+    "max_yield": 0.62,
+    "sample_count": 97,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "sapota": {
+    "mean_yield": 11.81,
+    "min_yield": 8.76,
+    "max_yield": 15.61,
+    "sample_count": 39,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "sesamum": {
+    "mean_yield": 0.44,
+    "min_yield": 0.3,
+    "max_yield": 0.7,
+    "sample_count": 1604,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "small millets": {
+    "mean_yield": 0.94,
+    "min_yield": 0.47,
+    "max_yield": 1.52,
+    "sample_count": 878,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "snak guard": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 82,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "soyabean": {
+    "mean_yield": 1.37,
+    "min_yield": 0.82,
+    "max_yield": 2.05,
+    "sample_count": 323,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "sugarcane": {
+    "mean_yield": 96.42,
+    "min_yield": 75.18,
+    "max_yield": 122.95,
+    "sample_count": 2265,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "sunflower": {
+    "mean_yield": 1.06,
+    "min_yield": 0.56,
+    "max_yield": 1.69,
+    "sample_count": 2900,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "sweet potato": {
+    "mean_yield": 14.36,
+    "min_yield": 9.15,
+    "max_yield": 20.87,
+    "sample_count": 967,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "tapioca": {
+    "mean_yield": 24.61,
+    "min_yield": 9.66,
+    "max_yield": 43.3,
+    "sample_count": 835,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "tea": {
+    "mean_yield": 1.41,
+    "min_yield": 0.3,
+    "max_yield": 3.2,
+    "sample_count": 16,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "tobacco": {
+    "mean_yield": 3.72,
+    "min_yield": 0.3,
+    "max_yield": 12.25,
+    "sample_count": 736,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "tomato": {
+    "mean_yield": 13.4,
+    "min_yield": 5.62,
+    "max_yield": 23.13,
+    "sample_count": 227,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "total foodgrain": {
+    "mean_yield": 1.46,
+    "min_yield": 0.3,
+    "max_yield": 3.2,
+    "sample_count": 56,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "turmeric": {
+    "mean_yield": 4.81,
+    "min_yield": 3.06,
+    "max_yield": 7.01,
+    "sample_count": 1255,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "urad": {
+    "mean_yield": 0.63,
+    "min_yield": 0.32,
+    "max_yield": 1.02,
+    "sample_count": 1747,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "varagu": {
+    "mean_yield": 1.07,
+    "min_yield": 0.73,
+    "max_yield": 1.49,
+    "sample_count": 58,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "water melon": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 32,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "wheat": {
+    "mean_yield": 1.14,
+    "min_yield": 0.48,
+    "max_yield": 1.97,
+    "sample_count": 443,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "yam": {
+    "mean_yield": 0.0,
+    "min_yield": 0.3,
+    "max_yield": 0.0,
+    "sample_count": 36,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "other misc. pulses": {
+    "mean_yield": 0.26,
+    "min_yield": 0.3,
+    "max_yield": 0.48,
+    "sample_count": 25,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  },
+  "other oilseeds": {
+    "mean_yield": 12.07,
+    "min_yield": 3.04,
+    "max_yield": 23.37,
+    "sample_count": 75,
+    "dataset_coverage": "1997-2020 South Indian Agricultural Records"
+  }
+}

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriVision AI | Smart Crop Pattern & Yield Prediction (South India)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome & Chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css?v=10.0">
+</head>
+
+<body class="dark-theme">
+    <!-- Background Gradient Overlay -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Header / Navbar -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand-logo">
+                <i class="fa-solid fa-wheat-awn logo-icon"></i>
+                <div class="logo-text">
+                    <span class="brand-name">AgriVision <span class="accent-text">AI</span></span>
+                    <span class="brand-tag">South India Crop & Yield Engine</span>
+                </div>
+            </div>
+
+            <!-- Mode Switcher -->
+            <div class="mode-switcher-card">
+                <span class="mode-label">Mode:</span>
+                <div class="toggle-pill-group">
+                    <button id="btn-farmer-mode" class="toggle-btn active" onclick="switchMode('farmer')">
+                        <i class="fa-solid fa-tractor"></i> Farmer Mode
+                    </button>
+                    <button id="btn-expert-mode" class="toggle-btn" onclick="switchMode('expert')">
+                        <i class="fa-solid fa-microscope"></i> Expert Mode
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main App Container -->
+    <main class="main-layout">
+
+        <!-- FARMER MODE SECTION -->
+        <section id="farmer-mode-section" class="mode-section active">
+            <!-- Hero Banner -->
+            <div class="hero-card glass-panel">
+                <div class="hero-badge"><i class="fa-solid fa-location-dot"></i> Tailored for South Indian Agriculture</div>
+                <h1>Smart Crop Advisor for Your Land</h1>
+                <p>Get instant crop recommendations, harvest yield estimations, and 3-season crop rotation plans based
+                    on official South Indian harvest records.</p>
+            </div>
+
+            <!-- Farmer Input Grid -->
+            <div class="input-grid">
+                <!-- Location & Land Card -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-map-location-dot card-icon"></i>
+                        <h3>1. Farm Location & Land Size</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-building-columns"></i> Select State</label>
+                            <select id="farmer-state" class="form-control custom-select-target"
+                                onchange="loadDistricts()">
+                                <option value="" disabled selected>-- Select State --</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Kerala">Kerala</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-tree-city"></i> Select District</label>
+                            <select id="farmer-district" class="form-control custom-select-target">
+                                <option value="" disabled selected>-- Select District --</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-7">
+                                <label><i class="fa-solid fa-ruler-combined"></i> Land Area</label>
+                                <input type="number" id="farmer-land-size" class="form-control" value="2" min="0.5"
+                                    step="0.5">
+                            </div>
+                            <div class="form-group col-5">
+                                <label>Unit</label>
+                                <select id="farmer-land-unit" class="form-control custom-select-target">
+                                    <option value="acres" selected>Acres</option>
+                                    <option value="hectares">Hectares</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group margin-top-sm">
+                            <label><i class="fa-solid fa-wallet"></i> Farmer's Budget (₹)</label>
+                            <input type="number" id="farmer-budget" class="form-control" value="60000" min="5000" step="5000" placeholder="Enter budget e.g. 60000">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Water & Soil Options Card -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-droplet card-icon"></i>
+                        <h3>2. Water & Farming Conditions</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-faucet-drip"></i> Water Availability</label>
+                            <div class="radio-pill-group">
+                                <label class="radio-pill">
+                                    <input type="radio" name="water-avail" value="High">
+                                    <span>High (Canal/Well)</span>
+                                </label>
+                                <label class="radio-pill active">
+                                    <input type="radio" name="water-avail" value="Medium" checked>
+                                    <span>Medium (Borewell)</span>
+                                </label>
+                                <label class="radio-pill">
+                                    <input type="radio" name="water-avail" value="Low">
+                                    <span>Low (Rainfed)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-seedling"></i> What did you grow last season?</label>
+                            <select id="farmer-prev-crop" class="form-control custom-select-target">
+                                <option value="none">First Time / Idle Land</option>
+                                <option value="rice" selected>Rice (Paddy)</option>
+                                <option value="maize">Maize (Corn)</option>
+                                <option value="cotton">Cotton</option>
+                                <option value="sugarcane">Sugarcane</option>
+                                <option value="groundnut">Groundnut</option>
+                                <option value="blackgram">Black Gram (Urad)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-vial"></i> Do you have a soil test report?</label>
+                            <div class="toggle-switch-group">
+                                <button type="button" id="btn-soil-no" class="switch-option active"
+                                    onclick="toggleSoilReport(false)">
+                                    No (Use District Defaults)
+                                </button>
+                                <button type="button" id="btn-soil-yes" class="switch-option"
+                                    onclick="toggleSoilReport(true)">
+                                    Yes (Enter Soil Values)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Optional Custom Soil Fields -->
+                        <div id="custom-soil-panel" class="custom-soil-box hidden">
+                            <div class="form-row">
+                                <div class="col-3">
+                                    <label>N (Nitrogen)</label>
+                                    <input type="number" id="soil-n" class="form-control form-control-sm" value="90">
+                                </div>
+                                <div class="col-3">
+                                    <label>P (Phosphorus)</label>
+                                    <input type="number" id="soil-p" class="form-control form-control-sm" value="45">
+                                </div>
+                                <div class="col-3">
+                                    <label>K (Potassium)</label>
+                                    <input type="number" id="soil-k" class="form-control form-control-sm" value="40">
+                                </div>
+                                <div class="col-3">
+                                    <label>Soil pH</label>
+                                    <input type="number" id="soil-ph" class="form-control form-control-sm" value="6.5"
+                                        step="0.1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Predict Action Button -->
+            <div class="action-bar">
+                <button class="btn-primary-large" onclick="submitFarmerPrediction()">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Analyze Land & Recommend Best Crops
+                </button>
+            </div>
+
+            <!-- Farmer Results Dashboard (Hidden until submit) -->
+            <div id="farmer-results-container" class="results-layout hidden">
+
+                <!-- Alerts Banner -->
+                <div id="farm-alerts-wrapper" class="alerts-container"></div>
+
+                <!-- 10-Step Interactive Stepper Bar -->
+                <div class="stepper-bar-container glass-card margin-bottom-lg">
+                    <div class="stepper-title-row">
+                        <h3><i class="fa-solid fa-list-check icon-emerald"></i> 10-Step Smart Agriculture Workflow</h3>
+                        <span class="status-pill-emerald"><i class="fa-solid fa-circle-check"></i> Analysis Complete</span>
+                    </div>
+                    <div class="stepper-flow-grid">
+                        <div class="step-chip active" onclick="scrollToStep('step-1-details')">
+                            <span class="chip-num">1</span>
+                            <span class="chip-label">Farm Details</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-2-analyze')">
+                            <span class="chip-num">2</span>
+                            <span class="chip-label">Analyze Land</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-3-recommend')">
+                            <span class="chip-num">3</span>
+                            <span class="chip-label">Recommend Crops</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-4-yield')">
+                            <span class="chip-num">4</span>
+                            <span class="chip-label">Estimate Yield</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-5-cost')">
+                            <span class="chip-num">5</span>
+                            <span class="chip-label">Cultivation Cost</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-6-products')">
+                            <span class="chip-num">6</span>
+                            <span class="chip-label">Agri Products</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-7-stores')">
+                            <span class="chip-num">7</span>
+                            <span class="chip-label">Compare Stores</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-8-budget')">
+                            <span class="chip-num">8</span>
+                            <span class="chip-label">Farmer Budget</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-9-margins')">
+                            <span class="chip-num">9</span>
+                            <span class="chip-label">Revenue & Margin</span>
+                        </div>
+                        <div class="chip-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="step-chip active" onclick="scrollToStep('step-10-monitoring')">
+                            <span class="chip-num">10</span>
+                            <span class="chip-label">Weather & Health</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 1 Card: Farm Details -->
+                <div id="step-1-details" class="glass-card margin-bottom-lg">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-map-location-dot card-icon icon-emerald"></i>
+                        <h3>Step 1: Enter Farm Details & Profile</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="farm-details-grid" class="info-metrics-grid">
+                            <!-- Rendered dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 Card: Analyze Land -->
+                <div id="step-2-analyze" class="glass-card margin-bottom-lg">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-microchip card-icon icon-emerald"></i>
+                        <h3>Step 2: AI Land & Soil Profile Analysis</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="land-analysis-grid" class="info-metrics-grid">
+                            <!-- Rendered dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 Card: Recommend Crops -->
+                <div id="step-3-recommend" class="margin-bottom-lg">
+                    <div class="section-title">
+                        <i class="fa-solid fa-wheat-awn-circle-check"></i>
+                        <h2>Step 3: Recommended Crops & Agronomic Suitability</h2>
+                    </div>
+
+                    <div id="crop-cards-grid" class="crop-cards-grid">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Step 4 Card: Estimate Yield -->
+                <div id="step-4-yield" class="glass-card margin-bottom-lg">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-chart-column card-icon icon-emerald"></i>
+                        <h3>Step 4: Estimated Harvest Yield & Production</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="yield-estimation-table-wrapper" class="table-responsive">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 Card: Cultivation Cost Breakdown -->
+                <div id="step-5-cost" class="glass-card margin-bottom-lg">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-calculator card-icon icon-emerald"></i>
+                        <h3>Step 5: Estimate Cultivation Cost</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-desc">Itemized per-acre and total farm operational cost breakdown for top crop:</p>
+                        <div id="cultivation-cost-table-wrapper" class="table-responsive margin-top-sm">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 Card: Required Agricultural Products -->
+                <div id="step-6-products" class="glass-card margin-bottom-lg">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-boxes-packing card-icon icon-emerald"></i>
+                        <h3>Step 6: Show Required Agricultural Products</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="required-products-grid" class="products-grid">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 Card: Compare Online Stores & Prices -->
+                <div id="step-7-stores" class="glass-card margin-bottom-lg">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-store card-icon icon-emerald"></i>
+                        <h3>Step 7: Compare Online Stores & Prices</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="store-comparison-wrapper" class="table-responsive">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8 Card: Check Farmer's Budget -->
+                <div id="step-8-budget" class="glass-card margin-bottom-lg">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-wallet card-icon icon-emerald"></i>
+                        <h3>Step 8: Check Farmer's Budget</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="budget-assessment-container">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 9 Card: Show Estimated Revenue & Margin -->
+                <div id="step-9-margins" class="glass-card margin-bottom-lg">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-chart-line card-icon icon-emerald"></i>
+                        <h3>Step 9: Show Estimated Revenue & Profit Margin</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="revenue-margin-grid" class="financials-dashboard-grid">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 10 Card: Live Weather Monitoring & Satellite Crop Health -->
+                <div id="step-10-monitoring" class="margin-bottom-lg">
+                    <div class="section-title">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <h2>Step 10: 5-Day Live Weather Forecast & 3-Season Rotation Plan</h2>
+                    </div>
+
+                    <!-- 5-Day Live Weather Widget -->
+                    <div class="glass-card margin-bottom-md">
+                        <div class="card-header border-bottom flex-between">
+                            <div class="d-flex align-center gap-sm">
+                                <i class="fa-solid fa-cloud-showers-heavy card-icon icon-cyan"></i>
+                                <h3>5-Day Regional Live Weather Forecast</h3>
+                            </div>
+                            <span class="pill-sm pill-emerald" id="weather-live-indicator"><i class="fa-solid fa-satellite-dish"></i> Live Satellite NWP</span>
+                        </div>
+                        <div class="card-body">
+                            <div id="weather-forecast-grid" class="weather-grid">
+                                <!-- Populated dynamically -->
+                            </div>
+                            <div id="weather-meta-footer" class="weather-meta-footer" style="margin-top: 12px; font-size: 11px; color: #9ca3af; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                                <span id="weather-updated-time"><i class="fa-solid fa-clock"></i> Updated: Real-time query</span>
+                                <span id="weather-licensing"><i class="fa-solid fa-scale-balanced"></i> Source: Open-Meteo High-Resolution NWP (CC BY 4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3-Season Rotation Plan (Full-Width Clean Card) -->
+                    <div class="glass-card">
+                        <div class="card-header border-bottom">
+                            <i class="fa-solid fa-arrows-spin card-icon icon-emerald"></i>
+                            <h3>Plan My Next 3 Seasons</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="section-desc">Sustainable crop rotation to prevent soil nutrient depletion and boost multi-year yields:</p>
+
+                            <div class="rotation-timeline timeline-horizontal">
+                                <div class="timeline-step">
+                                    <div class="step-badge kharif">Kharif (Monsoon)</div>
+                                    <h4 id="rot-kharif">Rice (Paddy)</h4>
+                                    <p class="step-sub">Primary cash & grain crop</p>
+                                </div>
+                                <div class="timeline-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                                <div class="timeline-step">
+                                    <div class="step-badge rabi">Rabi (Winter)</div>
+                                    <h4 id="rot-rabi">Black Gram (Urad)</h4>
+                                    <p id="rot-rabi-desc" class="step-sub">Fixes Nitrogen back into soil naturally</p>
+                                </div>
+                                <div class="timeline-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                                <div class="timeline-step">
+                                    <div class="step-badge zaid">Zaid (Summer)</div>
+                                    <h4 id="rot-zaid">Mung Bean (Green Gram)</h4>
+                                    <p id="rot-zaid-desc" class="step-sub">Low water requirement summer pulse</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Enterprise Database Audit Log & History Card -->
+                <div class="glass-card margin-top-lg">
+                    <div class="card-header border-bottom flex-between">
+                        <div class="d-flex align-center gap-sm">
+                            <i class="fa-solid fa-database card-icon icon-emerald"></i>
+                            <h3>Enterprise Database Audit Log (PostgreSQL / MySQL / SQLite)</h3>
+                        </div>
+                        <span class="pill-sm pill-cyan" id="db-status-badge"><i class="fa-solid fa-server"></i> Connected</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-desc">Persistent field advisory transactions logged via SQLAlchemy ORM:</p>
+                        <div class="table-responsive">
+                            <table class="agri-table" id="db-history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date & Time</th>
+                                        <th>District</th>
+                                        <th>Plot Size</th>
+                                        <th>Recommended Crop</th>
+                                        <th>Confidence</th>
+                                        <th>Est. Harvest</th>
+                                        <th>Net Profit</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="db-history-tbody">
+                                    <tr>
+                                        <td colspan="7" style="text-align: center; color: #9ca3af;">Loading database transactions...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </section>
+
+        <!-- EXPERT MODE SECTION -->
+        <section id="expert-mode-section" class="mode-section hidden">
+            <div class="hero-card glass-panel border-gold">
+                <div class="hero-badge badge-gold"><i class="fa-solid fa-microscope"></i> Advanced Machine Learning
+                    Sandbox</div>
+                <h1>Agricultural ML Model Benchmark Engine</h1>
+                <p>Directly tune Soil Nutrients, Climate, and Satellite Reflectance parameters. Compare Random Forest
+                    (~99.55%), SVM (~98.86%), and Deep Neural Networks (DNN).</p>
+            </div>
+
+            <div class="input-grid margin-top-md">
+                <!-- Expert Sliders -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-sliders card-icon"></i>
+                        <h3>1. Soil & Climate Control Sliders</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="slider-group">
+                            <div class="slider-header">
+                                <span>Nitrogen (N - kg/ha):</span>
+                                <span id="val-n" class="val-pill">90</span>
+                            </div>
+                            <input type="range" id="exp-n" min="0" max="140" value="90" oninput="updateVal('n')">
+                        </div>
+
+                        <div class="slider-group">
+                            <div class="slider-header">
+                                <span>Phosphorus (P - kg/ha):</span>
+                                <span id="val-p" class="val-pill">42</span>
+                            </div>
+                            <input type="range" id="exp-p" min="5" max="145" value="42" oninput="updateVal('p')">
+                        </div>
+
+                        <div class="slider-group">
+                            <div class="slider-header">
+                                <span>Potassium (K - kg/ha):</span>
+                                <span id="val-k" class="val-pill">43</span>
+                            </div>
+                            <input type="range" id="exp-k" min="5" max="205" value="43" oninput="updateVal('k')">
+                        </div>
+
+                        <div class="slider-group">
+                            <div class="slider-header">
+                                <span>Soil pH Level:</span>
+                                <span id="val-ph" class="val-pill">6.5</span>
+                            </div>
+                            <input type="range" id="exp-ph" min="3.5" max="9.5" step="0.1" value="6.5"
+                                oninput="updateVal('ph')">
+                        </div>
+
+                        <div class="slider-group">
+                            <div class="slider-header">
+                                <span>Temperature (°C):</span>
+                                <span id="val-temp" class="val-pill">26.5</span>
+                            </div>
+                            <input type="range" id="exp-temp" min="10" max="45" step="0.5" value="26.5"
+                                oninput="updateVal('temp')">
+                        </div>
+
+                        <div class="slider-group">
+                            <div class="slider-header">
+                                <span>Rainfall (mm):</span>
+                                <span id="val-rain" class="val-pill">200</span>
+                            </div>
+                            <input type="range" id="exp-rain" min="20" max="300" value="200"
+                                oninput="updateVal('rain')">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model Choice & Execution -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-brain card-icon"></i>
+                        <h3>2. Model Selection & Inference</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Select ML Classifier Algorithm:</label>
+                            <select id="exp-algo" class="form-control custom-select-target">
+                                <option value="rf" selected>Random Forest (Recommended - 99.55% Accuracy)</option>
+                                <option value="svm">Support Vector Machine - SVM (98.86% Accuracy)</option>
+                                <option value="dnn">Deep Neural Network - DNN (96.36% Accuracy)</option>
+                            </select>
+                        </div>
+
+                        <button class="btn-primary-large margin-top-md" onclick="submitExpertPrediction()">
+                            <i class="fa-solid fa-bolt"></i> Run ML Model Inference
+                        </button>
+
+                        <div id="expert-output" class="expert-results-box margin-top-md hidden">
+                            <div class="model-meta">
+                                <span id="exp-model-used">Random Forest</span> | Accuracy: <strong id="exp-model-acc"
+                                    class="accent-text">99.55%</strong>
+                            </div>
+                            <div id="expert-table-wrapper" class="margin-top-sm">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Benchmark & Feature Importance Charts -->
+            <div class="grid-2-col margin-top-lg">
+                <div class="glass-card">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-chart-column card-icon"></i>
+                        <h3>Model Comparison (Accuracy & F1-Score)</h3>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="modelBenchmarkChart" height="220"></canvas>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header border-bottom">
+                        <i class="fa-solid fa-chart-pie card-icon"></i>
+                        <h3>Feature Importance Ranking (RF Model)</h3>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="featureImportanceChart" height="220"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>AgriVision AI © 2026 | Decision-Support System for South Indian Agro-Climatic Zones | Meteorological Data: Open-Meteo (CC BY 4.0)</p>
+    </footer>
+
+    <script src="/static/js/main.js?v=16.0"></script>
+</body>
+
+</html>

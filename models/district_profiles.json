@@ -1,0 +1,507 @@
+{
+  "Tamil Nadu": {
+    "Thanjavur": {
+      "N": 90,
+      "P": 45,
+      "K": 40,
+      "ph": 6.5,
+      "rainfall": 210,
+      "temperature": 27.5,
+      "humidity": 78
+    },
+    "Coimbatore": {
+      "N": 75,
+      "P": 40,
+      "K": 50,
+      "ph": 6.8,
+      "rainfall": 150,
+      "temperature": 26.0,
+      "humidity": 72
+    },
+    "Madurai": {
+      "N": 80,
+      "P": 42,
+      "K": 45,
+      "ph": 7.0,
+      "rainfall": 160,
+      "temperature": 28.5,
+      "humidity": 70
+    },
+    "Salem": {
+      "N": 70,
+      "P": 38,
+      "K": 48,
+      "ph": 6.7,
+      "rainfall": 140,
+      "temperature": 27.0,
+      "humidity": 68
+    },
+    "Tiruchirappalli": {
+      "N": 85,
+      "P": 44,
+      "K": 42,
+      "ph": 6.6,
+      "rainfall": 180,
+      "temperature": 28.0,
+      "humidity": 75
+    },
+    "Erode": {
+      "N": 72,
+      "P": 41,
+      "K": 52,
+      "ph": 6.9,
+      "rainfall": 145,
+      "temperature": 27.2,
+      "humidity": 70
+    },
+    "Vellore": {
+      "N": 78,
+      "P": 39,
+      "K": 44,
+      "ph": 7.1,
+      "rainfall": 165,
+      "temperature": 27.8,
+      "humidity": 71
+    },
+    "Tirunelveli": {
+      "N": 82,
+      "P": 43,
+      "K": 41,
+      "ph": 6.5,
+      "rainfall": 190,
+      "temperature": 28.2,
+      "humidity": 76
+    }
+  },
+  "Karnataka": {
+    "Mandya": {
+      "N": 88,
+      "P": 46,
+      "K": 42,
+      "ph": 6.6,
+      "rainfall": 195,
+      "temperature": 25.5,
+      "humidity": 76
+    },
+    "Mysuru": {
+      "N": 82,
+      "P": 44,
+      "K": 45,
+      "ph": 6.7,
+      "rainfall": 180,
+      "temperature": 25.0,
+      "humidity": 74
+    },
+    "Ballari": {
+      "N": 65,
+      "P": 35,
+      "K": 55,
+      "ph": 7.5,
+      "rainfall": 110,
+      "temperature": 29.5,
+      "humidity": 60
+    },
+    "Belagavi": {
+      "N": 78,
+      "P": 42,
+      "K": 48,
+      "ph": 6.8,
+      "rainfall": 170,
+      "temperature": 24.5,
+      "humidity": 72
+    },
+    "Shivamogga": {
+      "N": 95,
+      "P": 50,
+      "K": 38,
+      "ph": 6.2,
+      "rainfall": 260,
+      "temperature": 24.0,
+      "humidity": 82
+    },
+    "Dharwad": {
+      "N": 74,
+      "P": 40,
+      "K": 50,
+      "ph": 7.0,
+      "rainfall": 155,
+      "temperature": 26.0,
+      "humidity": 68
+    },
+    "Hassan": {
+      "N": 85,
+      "P": 45,
+      "K": 40,
+      "ph": 6.4,
+      "rainfall": 220,
+      "temperature": 23.5,
+      "humidity": 80
+    },
+    "Bagalkot": {
+      "N": 70,
+      "P": 38,
+      "K": 52,
+      "ph": 7.4,
+      "rainfall": 125,
+      "temperature": 28.5,
+      "humidity": 64
+    },
+    "Bengaluru Rural": {
+      "N": 76,
+      "P": 42,
+      "K": 44,
+      "ph": 6.6,
+      "rainfall": 165,
+      "temperature": 24.0,
+      "humidity": 71
+    },
+    "Bengaluru Urban": {
+      "N": 72,
+      "P": 40,
+      "K": 42,
+      "ph": 6.8,
+      "rainfall": 160,
+      "temperature": 24.5,
+      "humidity": 70
+    },
+    "Bidar": {
+      "N": 68,
+      "P": 36,
+      "K": 50,
+      "ph": 7.6,
+      "rainfall": 140,
+      "temperature": 29.0,
+      "humidity": 62
+    },
+    "Chamarajanagar": {
+      "N": 80,
+      "P": 41,
+      "K": 46,
+      "ph": 6.7,
+      "rainfall": 175,
+      "temperature": 26.0,
+      "humidity": 73
+    },
+    "Chikkaballapur": {
+      "N": 74,
+      "P": 38,
+      "K": 45,
+      "ph": 6.9,
+      "rainfall": 150,
+      "temperature": 25.0,
+      "humidity": 68
+    },
+    "Chikkamagaluru": {
+      "N": 92,
+      "P": 48,
+      "K": 39,
+      "ph": 6.1,
+      "rainfall": 270,
+      "temperature": 22.5,
+      "humidity": 84
+    },
+    "Chitradurga": {
+      "N": 64,
+      "P": 34,
+      "K": 56,
+      "ph": 7.7,
+      "rainfall": 105,
+      "temperature": 29.0,
+      "humidity": 58
+    },
+    "Dakshina Kannada": {
+      "N": 96,
+      "P": 52,
+      "K": 36,
+      "ph": 5.7,
+      "rainfall": 310,
+      "temperature": 27.0,
+      "humidity": 86
+    },
+    "Davanagere": {
+      "N": 76,
+      "P": 41,
+      "K": 48,
+      "ph": 7.1,
+      "rainfall": 145,
+      "temperature": 27.5,
+      "humidity": 66
+    },
+    "Gadag": {
+      "N": 66,
+      "P": 36,
+      "K": 54,
+      "ph": 7.5,
+      "rainfall": 120,
+      "temperature": 28.0,
+      "humidity": 62
+    },
+    "Haveri": {
+      "N": 78,
+      "P": 42,
+      "K": 47,
+      "ph": 6.9,
+      "rainfall": 160,
+      "temperature": 26.5,
+      "humidity": 70
+    },
+    "Kalaburagi": {
+      "N": 62,
+      "P": 33,
+      "K": 58,
+      "ph": 7.8,
+      "rainfall": 115,
+      "temperature": 30.0,
+      "humidity": 56
+    },
+    "Kodagu": {
+      "N": 94,
+      "P": 50,
+      "K": 37,
+      "ph": 5.8,
+      "rainfall": 290,
+      "temperature": 21.0,
+      "humidity": 87
+    },
+    "Kolar": {
+      "N": 72,
+      "P": 39,
+      "K": 46,
+      "ph": 7.0,
+      "rainfall": 140,
+      "temperature": 25.5,
+      "humidity": 66
+    },
+    "Koppal": {
+      "N": 64,
+      "P": 35,
+      "K": 55,
+      "ph": 7.6,
+      "rainfall": 110,
+      "temperature": 29.5,
+      "humidity": 59
+    },
+    "Raichur": {
+      "N": 60,
+      "P": 32,
+      "K": 60,
+      "ph": 7.9,
+      "rainfall": 100,
+      "temperature": 30.5,
+      "humidity": 54
+    },
+    "Ramanagara": {
+      "N": 80,
+      "P": 43,
+      "K": 44,
+      "ph": 6.7,
+      "rainfall": 170,
+      "temperature": 25.0,
+      "humidity": 72
+    },
+    "Tumakuru": {
+      "N": 75,
+      "P": 40,
+      "K": 46,
+      "ph": 7.1,
+      "rainfall": 140,
+      "temperature": 26.0,
+      "humidity": 67
+    },
+    "Udupi": {
+      "N": 94,
+      "P": 51,
+      "K": 37,
+      "ph": 5.6,
+      "rainfall": 320,
+      "temperature": 27.2,
+      "humidity": 88
+    },
+    "Uttara Kannada": {
+      "N": 92,
+      "P": 49,
+      "K": 38,
+      "ph": 5.9,
+      "rainfall": 285,
+      "temperature": 26.0,
+      "humidity": 85
+    },
+    "Vijayanagara": {
+      "N": 66,
+      "P": 36,
+      "K": 54,
+      "ph": 7.5,
+      "rainfall": 115,
+      "temperature": 29.2,
+      "humidity": 60
+    },
+    "Yadgir": {
+      "N": 61,
+      "P": 32,
+      "K": 59,
+      "ph": 7.8,
+      "rainfall": 105,
+      "temperature": 30.2,
+      "humidity": 55
+    }
+  },
+  "Andhra Pradesh": {
+    "East Godavari": {
+      "N": 92,
+      "P": 48,
+      "K": 41,
+      "ph": 6.5,
+      "rainfall": 230,
+      "temperature": 28.0,
+      "humidity": 80
+    },
+    "West Godavari": {
+      "N": 94,
+      "P": 49,
+      "K": 40,
+      "ph": 6.4,
+      "rainfall": 240,
+      "temperature": 28.2,
+      "humidity": 82
+    },
+    "Guntur": {
+      "N": 80,
+      "P": 42,
+      "K": 46,
+      "ph": 7.2,
+      "rainfall": 170,
+      "temperature": 29.0,
+      "humidity": 70
+    },
+    "Krishna": {
+      "N": 88,
+      "P": 45,
+      "K": 43,
+      "ph": 6.8,
+      "rainfall": 200,
+      "temperature": 28.5,
+      "humidity": 76
+    },
+    "Kurnool": {
+      "N": 62,
+      "P": 32,
+      "K": 58,
+      "ph": 7.6,
+      "rainfall": 105,
+      "temperature": 30.0,
+      "humidity": 58
+    },
+    "Anantapur": {
+      "N": 58,
+      "P": 30,
+      "K": 60,
+      "ph": 7.8,
+      "rainfall": 95,
+      "temperature": 30.5,
+      "humidity": 55
+    },
+    "Chittoor": {
+      "N": 75,
+      "P": 38,
+      "K": 50,
+      "ph": 6.9,
+      "rainfall": 160,
+      "temperature": 27.5,
+      "humidity": 69
+    }
+  },
+  "Telangana": {
+    "Nalgonda": {
+      "N": 70,
+      "P": 36,
+      "K": 52,
+      "ph": 7.4,
+      "rainfall": 130,
+      "temperature": 29.0,
+      "humidity": 62
+    },
+    "Warangal": {
+      "N": 78,
+      "P": 40,
+      "K": 46,
+      "ph": 7.0,
+      "rainfall": 160,
+      "temperature": 28.5,
+      "humidity": 68
+    },
+    "Khammam": {
+      "N": 84,
+      "P": 44,
+      "K": 42,
+      "ph": 6.7,
+      "rainfall": 190,
+      "temperature": 28.2,
+      "humidity": 74
+    },
+    "Nizamabad": {
+      "N": 82,
+      "P": 42,
+      "K": 44,
+      "ph": 6.9,
+      "rainfall": 175,
+      "temperature": 28.0,
+      "humidity": 70
+    },
+    "Karimnagar": {
+      "N": 76,
+      "P": 38,
+      "K": 48,
+      "ph": 7.1,
+      "rainfall": 150,
+      "temperature": 28.8,
+      "humidity": 65
+    }
+  },
+  "Kerala": {
+    "Palakkad": {
+      "N": 88,
+      "P": 44,
+      "K": 38,
+      "ph": 6.1,
+      "rainfall": 250,
+      "temperature": 27.0,
+      "humidity": 82
+    },
+    "Alappuzha": {
+      "N": 95,
+      "P": 52,
+      "K": 35,
+      "ph": 5.8,
+      "rainfall": 290,
+      "temperature": 27.5,
+      "humidity": 86
+    },
+    "Wayanad": {
+      "N": 90,
+      "P": 48,
+      "K": 40,
+      "ph": 5.9,
+      "rainfall": 280,
+      "temperature": 22.0,
+      "humidity": 85
+    },
+    "Thrissur": {
+      "N": 86,
+      "P": 45,
+      "K": 39,
+      "ph": 6.2,
+      "rainfall": 260,
+      "temperature": 27.2,
+      "humidity": 84
+    },
+    "Idukki": {
+      "N": 92,
+      "P": 50,
+      "K": 42,
+      "ph": 5.6,
+      "rainfall": 310,
+      "temperature": 21.0,
+      "humidity": 88
+    }
+  }
+}
