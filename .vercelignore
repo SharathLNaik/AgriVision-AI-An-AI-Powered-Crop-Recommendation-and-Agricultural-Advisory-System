@@ -1,0 +1,11 @@
+data/**
+__pycache__/**
+*.pyc
+.git
+.github
+tests/**
+download_datasets.py
+train_models.py
+evaluate_models.py
+schema_mysql.sql
+schema_postgres.sql

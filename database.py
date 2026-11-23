@@ -19,12 +19,32 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship, scoped_session
 
+import shutil
+import tempfile
+
 # Database URL Configuration:
 # - PostgreSQL: postgresql://user:password@localhost:5432/agrivision_db
 # - MySQL: mysql+pymysql://user:password@localhost:3306/agrivision_db
 # - Default Local Fallback: SQLite
+is_serverless = bool(os.environ.get('VERCEL') or os.environ.get('AWS_LAMBDA_FUNCTION_NAME'))
 DEFAULT_SQLITE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'agrivision_enterprise.db')
-DATABASE_URL = os.environ.get('DATABASE_URL', f"sqlite:///{DEFAULT_SQLITE_PATH}")
+
+if not os.environ.get('DATABASE_URL'):
+    if is_serverless:
+        tmp_dir = tempfile.gettempdir()
+        tmp_sqlite_path = os.path.join(tmp_dir, 'agrivision_enterprise.db')
+        if os.path.exists(DEFAULT_SQLITE_PATH) and not os.path.exists(tmp_sqlite_path):
+            try:
+                shutil.copy2(DEFAULT_SQLITE_PATH, tmp_sqlite_path)
+            except Exception as e:
+                print(f"[Database] Warning copying SQLite db to temp: {e}")
+        db_path_str = tmp_sqlite_path.replace(os.sep, '/')
+        DATABASE_URL = f"sqlite:///{db_path_str}"
+    else:
+        db_path_str = DEFAULT_SQLITE_PATH.replace(os.sep, '/')
+        DATABASE_URL = f"sqlite:///{db_path_str}"
+else:
+    DATABASE_URL = os.environ.get('DATABASE_URL')
 
 # Fix Heroku/Render postgres:// prefix to postgresql:// for SQLAlchemy compatibility
 if DATABASE_URL.startswith("postgres://"):
@@ -256,7 +276,11 @@ def init_db():
     Initializes database schema (creates tables if they do not exist)
     and seeds standard demo farmer profile.
     """
-    Base.metadata.create_all(bind=engine)
+    try:
+        Base.metadata.create_all(bind=engine)
+    except Exception as e:
+        print(f"[Database] Notice creating tables (read-only filesystem or pre-existing schema): {e}")
+        return
     
     # Seed standard test/demo user if table is empty
     session = SessionLocal()

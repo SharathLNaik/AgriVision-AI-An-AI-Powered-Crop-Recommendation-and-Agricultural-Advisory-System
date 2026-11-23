@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.py": {
+      "includeFiles": [
+        "models/**",
+        "templates/**",
+        "static/**",
+        "agrivision_enterprise.db"
+      ],
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
+  ]
+}
